@@ -1,0 +1,3 @@
+#GlassFish 3
+#Sun Apr 24 19:12:26 IST 2016
+org.eclipse.jst.jee.server\:FirstApp=C\:\\Users\\vamshi\\GlassFish_Server\\glassfish\\domains\\domain1\\eclipseApps\\FirstApp

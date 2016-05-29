@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:jl="http://xmlns.jcp.org/jsf/composite/jsflive">
+
+    
+    <h:head>
+    <title>StudentForm</title>
+    </h:head>
+    <h:body>
+    <h:form>
+    First Name:<h:inputText id="firstName" value="#{studentBean.firstName}"></h:inputText>
+    <br/><br/>
+    Last Name:<h:inputText id="lastName" value="#{studentBean.lastName}"></h:inputText>
+    <br/>
+    <br/>
+    Select Country:<h:selectOneMenu id="country" value="#{studentBean.country}">
+    
+    <!-- <f:selectItem itemValue="India" itemLabel="India"></f:selectItem>
+    <f:selectItem itemValue="Begium" itemLabel="Belgium"></f:selectItem>
+    <f:selectItem itemValue="United States" itemLabel="United States"></f:selectItem>
+    <f:selectItem itemValue="France" itemLabel="France"></f:selectItem> -->
+    
+    <f:selectItems value="#{studentBean.countryList}"/>
+    </h:selectOneMenu>
+    <br/>
+    
+    <h:selectOneRadio id="planguages" value="#{studentBean.pLang}">
+    <f:selectItem itemValue="C" itemLabel="C" />
+    <f:selectItem itemValue="C++" itemLabel="C++"/>
+    <f:selectItem itemValue="Java" itemLabel="Java"/>
+    <f:selectItem itemValue="PHP" itemLabel="PHP"/>
+    </h:selectOneRadio>
+    
+    <h:selectManyCheckbox id="languages" value="#{studentBean.languagesKnown}">
+    <f:selectItem itemValue="telugu" itemLabel="Telugu"></f:selectItem>
+    <f:selectItem itemValue="Hindi" itemLabel="Hindi"></f:selectItem>
+    <f:selectItem itemValue="English" itemLabel="English"></f:selectItem>
+    <f:selectItem itemValue="Tamil" itemLabel="Tamil"></f:selectItem>
+    </h:selectManyCheckbox>
+    
+    <br/>
+    
+    <h:commandButton value="Sign In" action="studentResponse"></h:commandButton>
+    
+    </h:form>
+    
+    </h:body>
+    </html>
